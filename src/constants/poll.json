@@ -1,0 +1,17 @@
+{
+  "section": "Education",
+  "0": {
+    "title": "Did you graduate from higher education?",
+    "type": "Multiple choice",
+    "items": [
+      {
+        "answer": "yes",
+        "successor": "1"
+      },
+      {
+        "answer": "no",
+        "successor": "1"
+      }
+    ]
+  }
+}
