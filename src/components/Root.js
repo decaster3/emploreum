@@ -19,7 +19,7 @@ class Root extends Component {
     )
   }
 }
-
+// https://raw.githubusercontent.com/JulianLaval/canvas-particle-network/master/img/demo-bg.jpg
 Root.propTypes = {
   store: PropTypes.object.isRequired,
   history: PropTypes.object.isRequired
