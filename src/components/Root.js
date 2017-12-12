@@ -9,7 +9,7 @@ class Root extends Component {
     const routes = configureRoutes()
     const { store, history } = this.props
     return (
-      <div>
+      <div className='bodyClass'>
         <Provider store={store}>
           <ConnectedRouter history={history}>
             {routes}

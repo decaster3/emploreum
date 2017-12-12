@@ -6,6 +6,13 @@ body {
     margin: 0;
     padding: 0;
 }
+body div[data-reactroot],
+body .bodyClass,
+body #app {
+  position: relative;
+  width: 100%;
+  height: 100%
+}
 
 section {
     position: relative;
@@ -94,7 +101,7 @@ header.start .block span:focus:after {
     overflow: hidden;
 }
 
-#top-section #particle-canvas {
+#particle-canvas {
     position: absolute;
     top: 0;
     left: 0;
@@ -142,7 +149,3 @@ header.start .block span:focus:after {
         font-size: 14px;
     }
 }
-
-
-
-

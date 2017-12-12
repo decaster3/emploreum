@@ -5,7 +5,7 @@ import QuizContainer from './containers/quiz_container'
 
 const configureRoutes = () => {
   return (
-    <div>
+    <div className='bodyClass'>
       <Switch>
         <Route exact path='/' component={App} />
         <Route exact path='/developer_test' component={QuizContainer} />

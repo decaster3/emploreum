@@ -8,7 +8,7 @@ class QuizContainer extends Component {
   render () {
     let { currentQuestion, currentAnswers, currentAnswer, successor } = this.props.quiz
     return (
-      <div>
+      <div className='bodyClass'>
         <Quiz
           answer={this.props.answer}
           changeAnswer={this.props.changeAnswer}

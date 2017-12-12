@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import '../assets/quiz.css'
 
 class Quiz extends Component {
   render () {
@@ -18,7 +19,7 @@ class Quiz extends Component {
           <li key={index}>
             <input type='radio' id={id} name='selector' onClick={() => changeAnswer(answer, successor)} />
             <label htmlFor={id}> {answer} </label>
-            <div className='check' />
+            <div className='check ' />
           </li>
         )
       })
@@ -30,10 +31,13 @@ class Quiz extends Component {
     }
 
     return (
-      <div className='container'>
-        <h2>{question}</h2>
-        {answersTags}
-        <input type='button' value='Далее' onClick={() => {answer()}} />
+      <div className='bodyClass'>
+        <div id='particle-canvas' />
+        <div className='containerr'>
+          <h2>{question}</h2>
+          {answersTags}
+          <input type='button' value='Далее' onClick={() => {answer()}} />
+        </div>
       </div>
     )
   }

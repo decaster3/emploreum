@@ -66,7 +66,7 @@ let test =
       },
       {
         'answer': 'no',
-        'successor': '?'
+        'successor': 'end'
       }
     ]
   },

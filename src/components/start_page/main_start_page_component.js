@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class MainStartPage extends Component {
   render () {
     return (
-      <div>
+      <div className='bodyClass'>
         <header className='start hidden-xs'>
           <div className='block' id='header-about'>
             <span>
