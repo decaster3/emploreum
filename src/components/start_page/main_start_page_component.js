@@ -95,45 +95,39 @@ export default class MainStartPage extends Component {
                 <div data-target='fadeInLeft' className='col-xs-12 col-sm-6 col-md-3 item blue-item'>
                   <img src='../../assets/img/line1.png' />
                   <div className='col-xs-12' id='top'>
-                                summary
+                                A unique cv-token
                   </div>
                   <div className='col-xs-12 ' id='text'>
-                                unique token-resume. Anyone can create his work book in
-                                blockhouse, in
-                                which reflects the level of specific developer skills, work experience, education,
-                                certificates.
+                    Anyone can create his own labour book in the blockchain, which reflects the level of specific skills, experience, education, certificates.
+
                   </div>
                 </div>
                 <div data-target='fadeInLeft' className='col-xs-12 col-sm-6 col-md-3 item blue-item'>
                   <img src='../../assets/img/line1.png' />
                   <div className='col-xs-12' id='top'>
-                    employment contract
+                    Escrow smart contracts instead of a labor contract
                   </div>
                   <div className='col-xs-12 ' id='text'>
-                    Escrow smart contracts instead of a labor contract. Jobs are
-                    smart contract,
-                    with the requirement for work experience, and the level of certain skills.
+                  Jobs are a smart contract, with the requirement for work experience, and a level of certain skills.
                   </div>
                 </div>
                 <div className='clearfix hidden-md hidden-lg hidden-xs' />
                 <div data-target='fadeInLeft' className='col-xs-12 col-sm-6 col-md-3 item blue-item'>
                   <img src='../../assets/img/line1.png' />
                   <div className='col-xs-12' id='top'>
-                      Scils
+                    Companies pay for skills
                   </div>
                   <div className='col-xs-12 ' id='text'>
-                    Companies pay for their skills. Each skill (JS, C ++)
-                    costs different money in the labor market. Companies choose the developer level.
+                    Every skill (JS, C ++) costs different money on the labor market. Companies choose the developer level.
                   </div>
                 </div>
                 <div data-target='fadeInLeft' className='col-xs-12 col-sm-6 col-md-3 item blue-item'>
                   <img src='../../assets/img/line1.png' />
                   <div className='col-xs-12' id='top'>
-                    currency
+                    Internal currency
                   </div>
                   <div className='col-xs-12 ' id='text'>
-                    Internal currency. Time. Companies are paid for every hour worked
-                    time on any skill or their combination (JS + Ruby on Rails).
+                    Time. Companies pay per each hour of time worked on task using any skill or their combination(JS + Ruby on Rails).
                   </div>
                 </div>
               </div>
@@ -253,7 +247,7 @@ export default class MainStartPage extends Component {
         <section id='feed-back'>
           <div className='container'>
             <div className='row'>
-              <div data-target='slideInLeft' className='col-sm-6 col-xs-12 feed-item box animated'>
+              <div data-target='slideInLeft' className='col-sm-6 col-xs-12 feed-item box animated boxHidded'>
                 <div className='text-left'><h2>Company</h2></div>
                 <div className='form-group'>
                   <div className='input-group'>
@@ -268,7 +262,7 @@ export default class MainStartPage extends Component {
                   <button className='btn'>submit</button>
                 </div>
               </div>
-              <div data-target='slideInRight' className='col-sm-6 hidden-xs feed-item box animated'>
+              <div data-target='slideInRight' className='col-sm-6 hidden-xs feed-item box animated boxHidded'>
                 <div className='text-left'><h2>Developer</h2></div>
                 <h5>Are you IT developer? Help us improve our system!</h5>
                 <br />
