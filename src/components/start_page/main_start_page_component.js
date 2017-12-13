@@ -119,7 +119,7 @@ export default class MainStartPage extends Component {
                 <h2>TEAM MEMBERS</h2>
               </div>
 
-              <div className='col-sm-3 team-member'>
+              <div className='col-sm-2 col-sm-offset-1 team-member'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
                     <img src='https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/19420703_201049817088653_3083517987539423921_n.jpg?oh=c76a582fc3d2dad6c34c363c2f8ba1ca&oe=5ACFC214' className='img-responsive' alt='team04' />
@@ -133,7 +133,21 @@ export default class MainStartPage extends Component {
                   </div>
                 </div>
               </div>
-              <div className='col-sm-3 team-member'>
+              <div className='col-sm-2 team-member'>
+                <div className='team-member-bg'>
+                  <div className='member-img'>
+                    <img src='https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/19420703_201049817088653_3083517987539423921_n.jpg?oh=c76a582fc3d2dad6c34c363c2f8ba1ca&oe=5ACFC214' className='img-responsive' alt='team04' />
+                    <div className='overlay' />
+                  </div>
+                  <div className='team-detail'>
+                    <h6 className='member-name'>Mickhail Magomedov</h6>
+                    <p className='member-post'>Founder, developer, CEO</p>
+                    <hr />
+                    <p className='member-details'>Solidity developer, front-end developer, mobile app developer. Has experience in leading IT company in St. Petersburg. Has more than five completed projects.</p>
+                  </div>
+                </div>
+              </div>
+              <div className='col-sm-2 team-member'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
                     <img src='../../assets/img/i1.jpg' className='img-responsive' alt='team04' />
@@ -149,7 +163,7 @@ export default class MainStartPage extends Component {
                   </div>
                 </div>
               </div>
-              <div className='col-sm-3 team-member'>
+              <div className='col-sm-2 team-member'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
                     <img src='../../assets/img/r2.jpg' className='img-responsive' alt='team04' />
@@ -165,7 +179,7 @@ export default class MainStartPage extends Component {
                   </div>
                 </div>
               </div>
-              <div className='col-sm-3 team-member'>
+              <div className='col-sm-2 team-member'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
                     <img src='../../assets/img/a1.jpg' className='img-responsive' alt='team04' />
@@ -182,19 +196,17 @@ export default class MainStartPage extends Component {
               <div className='section text-center'>
                 <h2>ADVISORS</h2>
               </div>
-              <div className='col-sm-3 team-member'>
+              <div className='col-sm-2 col-sm-offset-1 team-member'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
-                    <img src='../../assets/img/ilgiz.jpg' className='img-responsive' alt='team04' />
+                    <img src='../../assets/img/g1.jpg' className='img-responsive' alt='team04' />
                     <div className='overlay' />
                   </div>
                   <div className='team-detail'>
-                    <h6 className='member-name'>Замалеев Ильгиз</h6>
-                    <p className='member-post'>developer</p>
+                    <h6 className='member-name'>Alexander Gryaznov</h6>
+                    <p className='member-post'>Chief Executive Officer</p>
                     <hr />
-                    <p className='member-details'>ПРофессор И ннополис , участник 15 сорревнований по
-                            программирования
-                            Победитель 5 из них , и просто ахуенный чувак</p>
+                    <p className='member-details'>Cryptology Expert, programmer with more than 10 years experience. Alexander founded and conducts the first academic course on Ethereum at Innopolis University.</p>
                   </div>
                 </div>
               </div>
@@ -208,7 +220,7 @@ export default class MainStartPage extends Component {
                 <img src='../../assets/img/programmm.png' />
               </div>
               <div className='paper-block'>
-                <span>Paper</span>
+                <span>White Paper</span>
                 <Download file='../../assets/emploreum.pdf' content='../../assets/emploreum.pdf'>
                   <button className='btn' type='button'>Click and Download</button>
                 </Download>
