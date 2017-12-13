@@ -1,7 +1,38 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import * as firebase from 'firebase'
 
 export default class MainStartPage extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      name: '',
+      email: '',
+      message: ''
+    }
+    this.handleChange = this.handleChange.bind(this)
+    this.writeFir = this.writeFir.bind(this)
+  }
+  handleChange (event) {
+    const target = event.target
+    const name = target.name
+    this.setState({
+      [name]: event.target.value
+    })
+  }
+  writeFir () {
+    var comanysRef = firebase.database().ref().child('companies')
+    comanysRef.push({
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message
+    })
+    this.setState({
+      name: '',
+      email: '',
+      message: ''
+    })
+  }
   componentDidMount () {
     var canvasDiv = document.getElementById('particle-canvas')
     var options = {
@@ -225,15 +256,15 @@ export default class MainStartPage extends Component {
                 <h5>Be one of the first companies of the future</h5>
                 <div className='form-group'>
                   <div className='input-group'>
-                    <input type='text' className='form-control' placeholder='name' aria-describedby='name' />
+                    <input type='text' className='form-control' placeholder='name' aria-describedby='name' name='name' onChange={this.handleChange} value={this.state.name} />
                     <span className='input-group-addon' id='name'><i className='fa fa-user' /> </span>
                   </div>
                   <div className='input-group '>
-                    <input type='text' className='form-control' placeholder='email' aria-describedby='email' />
+                    <input type='text' className='form-control' placeholder='email' aria-describedby='email' name='email' onChange={this.handleChange} value={this.state.email} />
                     <span className='input-group-addon' id='email'><i className='fa fa-address-book' /> </span>
                   </div>
-                  <textarea className='form-control' placeholder='Message' />
-                  <button className='btn'>submit</button>
+                  <textarea className='form-control' placeholder='Message' name='message' onChange={this.handleChange} value={this.state.message} />
+                  <button className='btn' onClick={() => this.writeFir()}>submit</button>
                 </div>
               </div>
               <div data-target='slideInRight' className='col-sm-6 hidden-xs feed-item box animated boxHidded'>
