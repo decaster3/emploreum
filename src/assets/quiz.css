@@ -23,11 +23,15 @@ body #app {
   width: 100%;
 }
 
-textarea {
+.textareaa {
   margin-top: 80px;
   margin-left: 20px;
   width: 430px !important;
   margin-bottom: 200px;
+}
+.centr {
+ margin: 0 auto;
+ width: 80%;
 }
 
 .containerr{
