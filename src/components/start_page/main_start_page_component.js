@@ -174,6 +174,7 @@ export default class MainStartPage extends Component {
                   </div>
                 </div>
               </div>
+              <div className='clearfix' />
               <div data-target='fadeIn' className='col-sm-3 team-member box animated boxHidded'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
