@@ -78,7 +78,7 @@ header.start .block span:focus:after {
     overflow: hidden;
 }
 
-#particle-canvas {
+#top-section #particle-canvas {
     position: absolute;
     top: 0;
     left: 0;

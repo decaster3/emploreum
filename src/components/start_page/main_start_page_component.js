@@ -70,27 +70,26 @@ export default class MainStartPage extends Component {
                   Emploreum is a decentralized labor exchange where all contracts between employee and employer are made through Ethereum blockchain.
                   The whole history of the employee, his education, the current level of knowledge in certain areas of IT is a cv-token of the employee which can be used for evaluation and ranking of all employees. Employees have a rating which is an indicator of the quality of their work. At the same time, companies also have a rating reflecting the level of the company. With the rating maintenance of companies and employees, the System is able to determine the cost per hour of employee work.
               <div id='plus'>
-                <div data-target='fadeInLeft' className='col-xs-12 col-sm-6 col-md-3 item blue-item'>
+                <div data-target='slideInUp' className='col-xs-12 col-sm-6 col-md-3 item blue-item col-xs-12 box animated boxHidded'>
                   <img src='../../assets/img/line1.png' />
                   <div className='col-xs-12' id='top'>
-                                A unique cv-token
+                    A unique cv-token
                   </div>
                   <div className='col-xs-12 ' id='text'>
                     Anyone can create his own labour book in the blockchain, which reflects the level of specific skills, experience, education, certificates.
-
                   </div>
                 </div>
-                <div data-target='fadeInLeft' className='col-xs-12 col-sm-6 col-md-3 item blue-item'>
+                <div data-target='slideInUp' className='col-xs-12 col-sm-6 col-md-3 item blue-item col-xs-12 box animated boxHidded'>
                   <img src='../../assets/img/line1.png' />
                   <div className='col-xs-12' id='top'>
                     Escrow smart contracts instead of a labor contract
                   </div>
                   <div className='col-xs-12 ' id='text'>
-                  Jobs are a smart contract, with the requirement for work experience, and a level of certain skills.
+                    Jobs are a smart contract, with the requirement for work experience, and a level of certain skills.
                   </div>
                 </div>
                 <div className='clearfix hidden-md hidden-lg hidden-xs' />
-                <div data-target='fadeInLeft' className='col-xs-12 col-sm-6 col-md-3 item blue-item'>
+                <div data-target='slideInUp' className='col-xs-12 col-sm-6 col-md-3 item blue-item col-xs-12 box animated boxHidded'>
                   <img src='../../assets/img/line1.png' />
                   <div className='col-xs-12' id='top'>
                     Companies pay for skills
@@ -99,7 +98,7 @@ export default class MainStartPage extends Component {
                     Every skill (JS, C ++) costs different money on the labor market. Companies choose the developer level.
                   </div>
                 </div>
-                <div data-target='fadeInLeft' className='col-xs-12 col-sm-6 col-md-3 item blue-item'>
+                <div data-target='slideInUp' className='col-xs-12 col-sm-6 col-md-3 item blue-item col-xs-12 box animated boxHidded'>
                   <img src='../../assets/img/line1.png' />
                   <div className='col-xs-12' id='top'>
                     Internal currency
@@ -119,7 +118,7 @@ export default class MainStartPage extends Component {
                 <h2>TEAM MEMBERS</h2>
               </div>
 
-              <div className='col-sm-2 col-sm-offset-1 team-member'>
+              <div data-target='fadeIn' className='col-sm-3 team-member box animated boxHidded'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
                     <img src='https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/19420703_201049817088653_3083517987539423921_n.jpg?oh=c76a582fc3d2dad6c34c363c2f8ba1ca&oe=5ACFC214' className='img-responsive' alt='team04' />
@@ -129,11 +128,11 @@ export default class MainStartPage extends Component {
                     <h6 className='member-name'>Rinat Khatipov</h6>
                     <p className='member-post'>Founder, front-end developer, design, CEO</p>
                     <hr />
-                    <p className='member-details'>Innopolis University student. Solidity developer, front-end developer, mobile app developer. Has experience in leading IT company in St. Petersburg. Has more than five completed projects.</p>
+                    <p className='member-details'>Innopolis University student. Solidity developer, front-end developer, mobile app developer. Has experience in leading IT company in St. Petersburg. Is co-founder of many start-ups</p>
                   </div>
                 </div>
               </div>
-              <div className='col-sm-2 team-member'>
+              <div data-target='fadeIn' className='col-sm-3 team-member box animated boxHidded'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
                     <img src='../../assets/img/m1.jpg' className='img-responsive' alt='team04' />
@@ -147,7 +146,7 @@ export default class MainStartPage extends Component {
                   </div>
                 </div>
               </div>
-              <div className='col-sm-2 team-member'>
+              <div data-target='fadeIn' className='col-sm-3 team-member box animated boxHidded'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
                     <img src='../../assets/img/i2.jpg' className='img-responsive' alt='team04' />
@@ -161,7 +160,7 @@ export default class MainStartPage extends Component {
                   </div>
                 </div>
               </div>
-              <div className='col-sm-2 team-member'>
+              <div data-target='fadeIn' className='col-sm-3 team-member box animated boxHidded'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
                     <img src='../../assets/img/r3.jpg' className='img-responsive' alt='team04' />
@@ -175,7 +174,7 @@ export default class MainStartPage extends Component {
                   </div>
                 </div>
               </div>
-              <div className='col-sm-2 team-member'>
+              <div data-target='fadeIn' className='col-sm-3 team-member box animated boxHidded'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
                     <img src='../../assets/img/a1.jpg' className='img-responsive' alt='team04' />
@@ -192,7 +191,7 @@ export default class MainStartPage extends Component {
               <div className='section text-center'>
                 <h2>ADVISORS</h2>
               </div>
-              <div className='col-sm-2 col-sm-offset-1 team-member'>
+              <div data-target='fadeIn' className='col-sm-3 team-member box animated boxHidded'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
                     <img src='../../assets/img/g1.jpg' className='img-responsive' alt='team04' />
