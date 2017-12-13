@@ -18,7 +18,6 @@ class Quiz extends Component {
   render () {
     let { question, answers, currentAnswer, changeAnswer, answer, successor } = this.props
     var answersTags = null
-    console.log("succses " + successor)
     if (successor) {
       answersTags = <textarea className='form-control textareaa' rows='10' cols='45' name='text' value={currentAnswer} onChange={(event) => { changeAnswer(event.target.value, successor) }} />
     } else {
@@ -28,7 +27,7 @@ class Quiz extends Component {
 
         return (
           <li key={index}>
-            <input type='radio' id={id} name='selector' onClick={() => changeAnswer(answer, successor)} />
+            <input type='radio' checked={currentAnswer === answer} id={id} name='selector' onClick={() => changeAnswer(answer, successor)} />
             <label htmlFor={id}> {answer} </label>
             <div className='check ' />
           </li>
@@ -47,6 +46,8 @@ class Quiz extends Component {
         <div className='containerr'>
           <h2>{question}</h2>
           {answersTags}
+        </div>
+        <div className='btn-wrapper'>
           <button className='btnn' onClick={() => { answer() }}>Next</button>
         </div>
       </div>

@@ -184,7 +184,7 @@ header.start .block span:focus:after {
     border-radius: 4px;
     color: #fff;
     border-width: 0px;
-    padding: 5px;
+    padding: 10px;
     width: 150px;
 }
 

@@ -10,6 +10,11 @@ export function changeAnswer (currentAnswer, successor) {
     successor
   }
 }
+export function init () {
+  return {
+    type: C.INIT
+  }
+}
 export function answer () {
   return (dispatch, getState) => {
     var { nextQuestion } = getState().quiz

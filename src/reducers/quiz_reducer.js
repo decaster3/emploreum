@@ -24,6 +24,8 @@ module.exports = function (currentstate = initialState.quiz, action) {
         currentAnswer: action.currentAnswer,
         nextQuestion: action.successor
       }
+    case C.INIT:
+      return initialState.quiz
     default:
       return currentstate
   }

@@ -51,14 +51,27 @@ body #app {
 .btnn:hover{
     background: #3498DB;
 }
+.btn-wrapper {
+  z-index: 2;
+  position: absolute;
+  margin: auto;
+  display: block;
+  width: 200px;
+  height: 100px;
+  margin-top: 670px;
+  padding: 0;
+  text-align: center;
+  bottom: 0; left:0; right: 0; top:0;
+}
 .btnn{
     background: #257ca7;
-    font-size: 20px;
+    font-size: 25px;
     border-radius: 4px;
     color: #fff;
     border-width: 0px;
     padding: 5px;
-    width: 70px;
+    width: 200px;
+
 }
 
 h2 {
@@ -121,7 +134,15 @@ ul li .check{
 	transition: border .25s linear;
 	-webkit-transition: border .25s linear;
 }
-
+#particle-canvas {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1;
+}
 ul li:hover .check {
   border: 5px solid #FFFFFF;
 }

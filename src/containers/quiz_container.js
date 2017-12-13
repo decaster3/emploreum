@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import Quiz from '../components/quiz.js'
-import { changeAnswer, answer } from '../actions/quiz_actions.js'
+import { changeAnswer, answer, init } from '../actions/quiz_actions.js'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 class QuizContainer extends Component {
+  componentDidMount() {
+    this.props.init();
+  }
   render () {
     let { currentQuestion, currentAnswers, currentAnswer, successor } = this.props.quiz
     return (
@@ -35,6 +38,7 @@ function mapStateToProps (state) {
 function mapDispatchToProps (dispatch) {
   return bindActionCreators(
     {
+      init: init,
       changeAnswer: changeAnswer,
       answer: answer
     },
