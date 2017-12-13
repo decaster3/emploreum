@@ -129,53 +129,49 @@ export default class MainStartPage extends Component {
                     <h6 className='member-name'>Rinat Khatipov</h6>
                     <p className='member-post'>Founder, developer, CEO</p>
                     <hr />
-                    <p className='member-details'>Solidity developer, front-end developer, mobile app developer. Has experience in leading IT company in St. Petersburg. Has more than five completed projects.</p>
+                    <p className='member-details'>Innopolis University student. Solidity developer, front-end developer, mobile app developer. Has experience in leading IT company in St. Petersburg. Has more than five completed projects.</p>
                   </div>
                 </div>
               </div>
               <div className='col-sm-2 team-member'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
-                    <img src='https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/19420703_201049817088653_3083517987539423921_n.jpg?oh=c76a582fc3d2dad6c34c363c2f8ba1ca&oe=5ACFC214' className='img-responsive' alt='team04' />
+                    <img src='../../assets/img/m1.jpg' className='img-responsive' alt='team04' />
                     <div className='overlay' />
                   </div>
                   <div className='team-detail'>
                     <h6 className='member-name'>Mickhail Magomedov</h6>
                     <p className='member-post'>Founder, developer, CEO</p>
                     <hr />
-                    <p className='member-details'>Solidity developer, front-end developer, mobile app developer. Has experience in leading IT company in St. Petersburg. Has more than five completed projects.</p>
+                    <p className='member-details'>Student of Kazan Federal University. More than 5 years of work experience. Full stack web developer. Participated in the creation of 3 startups</p>
                   </div>
                 </div>
               </div>
               <div className='col-sm-2 team-member'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
-                    <img src='../../assets/img/i1.jpg' className='img-responsive' alt='team04' />
+                    <img src='../../assets/img/i2.jpg' className='img-responsive' alt='team04' />
                     <div className='overlay' />
                   </div>
                   <div className='team-detail'>
                     <h6 className='member-name'>Ilgiz Zamaleev</h6>
                     <p className='member-post'>Founder, developer</p>
                     <hr />
-                    <p className='member-details'>ПРофессор И ннополис , участник 15 сорревнований по
-                            программирования
-                            Победитель 5 из них , и просто ахуенный чувак</p>
+                    <p className='member-details'>Innopolis University student. ReactJS, React native, solidity developer. More than 3 years experience in web development.</p>
                   </div>
                 </div>
               </div>
               <div className='col-sm-2 team-member'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
-                    <img src='../../assets/img/r2.jpg' className='img-responsive' alt='team04' />
+                    <img src='../../assets/img/r3.jpg' className='img-responsive' alt='team04' />
                     <div className='overlay' />
                   </div>
                   <div className='team-detail'>
                     <h6 className='member-name'>Rinat Gumarov</h6>
                     <p className='member-post'>Founder, developer</p>
                     <hr />
-                    <p className='member-details'>ПРофессор И ннополис , участник 15 сорревнований по
-                            программирования
-                            Победитель 5 из них , и просто ахуенный чувак</p>
+                    <p className='member-details'>Innopolis University student. Solidity, Java, JavaScript developer. Have 3 years expiriance in mobile development. Have expiriance in enterprice development.</p>
                   </div>
                 </div>
               </div>
