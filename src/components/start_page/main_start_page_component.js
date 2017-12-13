@@ -1,12 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Download from '@axetroy/react-download';
 
 export default class MainStartPage extends Component {
-  constructor (props) {
-    super(props)
-    this.downloadParep = this.downloadParep.bind(this)
-  }
   componentDidMount () {
     var canvasDiv = document.getElementById('particle-canvas')
     var options = {
@@ -18,10 +13,6 @@ export default class MainStartPage extends Component {
     }
     var particleCanvas = new ParticleNetwork(canvasDiv, options)
     window.midleTopSection()
-  }
-
-  downloadParep () {
-
   }
   render () {
     return (

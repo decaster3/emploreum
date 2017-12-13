@@ -6,12 +6,12 @@ import configureStore, { history } from './store/configureStore'
 import * as firebase from 'firebase'
 
 var config = {
-  apiKey: 'AIzaSyAoohB8XbCd3c4mTunaAN4lu87YHODr4q0',
-  authDomain: 'emploreum.firebaseapp.com',
-  databaseURL: 'https://emploreum.firebaseio.com',
-  projectId: 'emploreum',
-  storageBucket: 'emploreum.appspot.com',
-  messagingSenderId: '99381427050'
+  apiKey: 'AIzaSyB2VNB3Z30LMl7lS-XGbmfmT9bXG5rZOkM',
+  authDomain: 'emploreum-b3df5.firebaseapp.com',
+  databaseURL: 'https://emploreum-b3df5.firebaseio.com',
+  projectId: 'emploreum-b3df5',
+  storageBucket: 'emploreum-b3df5.appspot.com',
+  messagingSenderId: '594243948757'
 }
 firebase.initializeApp(config)
 
