@@ -1,41 +1,53 @@
 import React, { Component } from 'react'
+import * as firebase from 'firebase'
 
 export default class MainStartPage extends Component {
+  constructor (props) {
+    super(props)
+    this.downloadParep = this.downloadParep.bind(this)
+  }
+  componentWillMount () {
+
+  }
+  downloadParep () {
+    var storage = firebase.storage()
+    var pathReference = storage.ref('line1.png')
+    pathReference.getDownloadURL().then(function (url) {
+      var xhr = new XMLHttpRequest()
+      xhr.responseType = 'blob'
+      xhr.onload = function (event) {
+        var blob = xhr.response
+        console.log(blob)
+        console.log(event)
+      }
+      xhr.open('GET', url)
+      xhr.send()
+    }).catch(function (error) {
+      console.log(error)
+    })
+  }
   render () {
     return (
       <div className='bodyClass'>
         <header className='start hidden-xs'>
           <div className='block' id='header-about'>
             <span>
-              <div className='text'>about</div>
+              about
             </span>
           </div>
           <div className='block' id='header-team'>
             <span>
-              <div className='text'>
-                TEAM
-              </div>
-            </span>
-          </div>
-          <div className='block' id='header-step'>
-            <span>
-              <div className='text'>
-                steps
-              </div>
+              TEAM
             </span>
           </div>
           <div className='block'>
             <span>
-              <div className='text' id='header-ico'>
-                ico
-              </div>
+              paper
             </span>
           </div>
           <div className='block'>
             <span>
-              <div className='text' id='header-contact'>
-                contact
-              </div>
+              contact
             </span>
           </div>
         </header>
@@ -219,7 +231,7 @@ export default class MainStartPage extends Component {
               </div>
               <div className='paper-block'>
                 <span>Paper</span>
-                <button className='btn'>DOWNLOAD</button>
+                <button className='btn' onClick={() => this.downloadParep()}>DOWNLOAD</button>
               </div>
               <div className='paper-block hidden-xs' id='desc'>
                 This is what will help you understand
