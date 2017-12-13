@@ -8,7 +8,7 @@ class Quiz extends Component {
     var answersTags = null
     console.log("succses " + successor)
     if (successor) {
-      answersTags = <textarea className='form-control' rows='10' cols='45' name='text' value={currentAnswer} onChange={(event) => { changeAnswer(event.target.value, successor) }} />
+      answersTags = <textarea className='form-control textareaa' rows='10' cols='45' name='text' value={currentAnswer} onChange={(event) => { changeAnswer(event.target.value, successor) }} />
     } else {
       answersTags = answers.map((answersItem, index) => {
         let {answer, successor} = answersItem
@@ -23,7 +23,7 @@ class Quiz extends Component {
         )
       })
       answersTags = (
-        <ul>
+        <ul className='centr'>
           {answersTags}
         </ul>
       )
