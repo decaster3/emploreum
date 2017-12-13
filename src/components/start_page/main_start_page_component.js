@@ -217,9 +217,9 @@ export default class MainStartPage extends Component {
               </div>
               <div className='paper-block'>
                 <span>White Paper</span>
-                <Download file='../../assets/emploreum.pdf' content='../../assets/emploreum.pdf'>
-                  <button className='btn' type='button'>Click and Download</button>
-                </Download>
+
+                  <a href='../../assets/emploreum.pdf' className='btn' type='button'>Click and Download</a>
+
               </div>
               <div className='paper-block hidden-xs' id='desc'>
                 This is what will help you understand
