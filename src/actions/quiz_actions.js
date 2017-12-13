@@ -1,4 +1,5 @@
 var C = require('../constants/quiz_constants.js')
+import { push } from 'react-router-redux'
 
 
 export function changeAnswer (currentAnswer, successor) {
@@ -12,18 +13,24 @@ export function changeAnswer (currentAnswer, successor) {
 export function answer () {
   return (dispatch, getState) => {
     var { nextQuestion } = getState().quiz
-    let { answers, title, successor } = getState().quiz.questions[nextQuestion]
-
-    dispatch({
-      type: C.ADD_ANSWER,
-      answers,
-      question: title,
-      successor
-    })
 
     if (nextQuestion === 'end') {
       dispatch({
-        type: C.END_QUIZ
+        type: C.END_QUIZ,
+        question: 'Thank you!'
+      })
+      console.log(getState().quiz.answers)
+      setTimeout(function () {
+        dispatch(push('/'))
+      }, 2000)
+    } else {
+      let { answers, title, successor } = getState().quiz.questions[nextQuestion]
+
+      dispatch({
+        type: C.ADD_ANSWER,
+        answers,
+        question: title,
+        successor
       })
     }
   }

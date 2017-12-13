@@ -2,8 +2,6 @@ var C = require('../constants/quiz_constants.js')
 var initialState = require('./initial_state.js')
 
 module.exports = function (currentstate = initialState.quiz, action) {
-  console.log(action)
-
   switch (action.type) {
     case C.ADD_ANSWER:
       return {
@@ -16,7 +14,9 @@ module.exports = function (currentstate = initialState.quiz, action) {
       }
     case C.END_QUIZ:
       return {
-        ...currentstate
+        answers: [...currentstate.answers, currentstate.currentAnswer],
+        currentAnswers: [],
+        currentQuestion: action.question
       }
     case C.CHANGE_ANSWER:
       return {

@@ -106,23 +106,23 @@ ul li .check::before {
   border-radius: 100%;
   height: 15px;
   width: 15px;
-  top: 5px;
-	left: 5px;
+  top: 0px;
+	left: 0px;
   margin: auto;
 	transition: background 0.25s linear;
 	-webkit-transition: background 0.25s linear;
 }
 
 input[type=radio]:checked ~ .check {
-  border: 5px solid #0DFF92;
+  border: 5px solid #3498DB;
 }
 
 input[type=radio]:checked ~ .check::before{
-  background: #0DFF92;
+  background: #3498DB;
 }
 
 input[type=radio]:checked ~ label{
-  color: #0DFF92;
+  color: #3498DB;
 }
 
 .signature {
