@@ -54,6 +54,7 @@ body #app {
 .btnn{
     background: #257ca7;
     font-size: 20px;
+    border-radius: 4px;
     color: #fff;
     border-width: 0px;
     padding: 5px;

@@ -1,5 +1,4 @@
-
-var midleTopSection = function () {
+window.midleTopSection = function () {
 
     var $textDoomObj = $("#top-section").find("#text");
     var top = $("#top-section").height() / 2 - $textDoomObj.height() / 2;
@@ -17,70 +16,25 @@ var midleTopSection = function () {
     $("#desccription").find("#window").css({
         "left": windowLeft
     });
+
+
 };
 
-$(function () {
-
-    midleTopSection();
-
-    var canvasDiv = document.getElementById('particle-canvas');
-
-    var options = {
-        particleColor: '#888',
-        interactive: true,
-        speed: 'medium',
-        density: 'high',
-        background: "https://raw.githubusercontent.com/JulianLaval/canvas-particle-network/master/img/demo-bg.jpg"
-    };
-
-    var particleCanvas = new ParticleNetwork(canvasDiv, options);
-
-
-});
-
 $(window).on("resize", function () {
-    midleTopSection();
+    window.midleTopSection();
 });
 
 $(window).on("scroll", function () {
 
     var scroll = $(document).scrollTop();
 
-    if (scroll > 50) {
+    $('.box').waypoint(function (dir) {
+        var animation = $(this).attr("data-target");
+        if (dir === 'down' && !$(this).hasClass(animation)) {
+            $(this).addClass(animation);
+        }
+    }, {
+        offset: '80%'
+    })
 
-        $("header").removeClass("start");
-        $("header").css({
-            "top": "0",
-            "position": "fixed"
-        });
-        $("header").addClass("hoverable");
-
-    } else {
-
-        $("header").addClass("start");
-        $("header").css({
-            "top": "30px",
-            "position": "absolute"
-        })
-        $("header").removeClass("hoverable");
-
-    }
-
-    if (
-        scroll > 50 && scroll <= $("#top-section").height()
-    ) {
-        $("#header-about").find(".text").css("top", "0");
-    } else {
-        $("#header-about").find(".text").css("top", "");
-    }
-
-
-    if (
-        scroll > $("#top-section").height() && scroll <= $("#top-section").height() + $("#team").height()
-    ) {
-        $("#header-team .text").css("top", "0");
-    } else {
-        $("#header-team .text").css("top", "");
-    }
-
-})
+});

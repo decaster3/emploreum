@@ -3,6 +3,18 @@ import PropTypes from 'prop-types'
 import '../assets/quiz.css'
 
 class Quiz extends Component {
+  componentDidMount () {
+    var canvasDiv = document.getElementById('particle-canvas')
+    var options = {
+      particleColor: '#888',
+      interactive: true,
+      speed: 'medium',
+      density: 'high',
+      background: "/assets/img/bg.png"
+    }
+    var particleCanvas = new ParticleNetwork(canvasDiv, options)
+  }
+
   render () {
     let { question, answers, currentAnswer, changeAnswer, answer, successor } = this.props
     var answersTags = null

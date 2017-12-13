@@ -1,14 +1,25 @@
 import React, { Component } from 'react'
 import * as firebase from 'firebase'
+import { Link } from 'react-router-dom'
 
 export default class MainStartPage extends Component {
   constructor (props) {
     super(props)
     this.downloadParep = this.downloadParep.bind(this)
   }
-  componentWillMount () {
-
+  componentDidMount () {
+    var canvasDiv = document.getElementById('particle-canvas')
+    var options = {
+      particleColor: '#888',
+      interactive: true,
+      speed: 'medium',
+      density: 'high',
+      background: "/assets/img/bg.png"
+    }
+    var particleCanvas = new ParticleNetwork(canvasDiv, options)
+    window.midleTopSection()
   }
+
   downloadParep () {
     var storage = firebase.storage()
     var pathReference = storage.ref('line1.png')
@@ -56,8 +67,7 @@ export default class MainStartPage extends Component {
           <div id='text'>
             <h2>Emploreum</h2>
             <small>
-              Education, work experience, skills in It - one token in the block. The revolution in the selection of IT
-              workers
+              Education, experience, skills - one token on the blockchain. This is the revolution in recruitment of IT employees.
             </small>
           </div>
         </section>
@@ -227,7 +237,7 @@ export default class MainStartPage extends Component {
           <div className='container'>
             <div className='row'>
               <div className='paper-block'>
-                <img src='img/programmm.png' />
+                <img src='../../assets/img/programmm.png' />
               </div>
               <div className='paper-block'>
                 <span>Paper</span>
@@ -244,7 +254,7 @@ export default class MainStartPage extends Component {
           <div className='container'>
             <div className='row'>
               <div data-target='slideInLeft' className='col-sm-6 col-xs-12 feed-item box animated'>
-                <div className='text-left'><h2>Contacts</h2></div>
+                <div className='text-left'><h2>Company</h2></div>
                 <div className='form-group'>
                   <div className='input-group'>
                     <input type='text' className='form-control' placeholder='name' aria-describedby='name' />
@@ -259,17 +269,10 @@ export default class MainStartPage extends Component {
                 </div>
               </div>
               <div data-target='slideInRight' className='col-sm-6 hidden-xs feed-item box animated'>
-                T is the most developing region in the world. The search for
-                qualified employees requires tremendous efforts. We break the
-                recruitment industry. Emploreum is a bridge between IT
-                companies and specialists. Distributed system for the search
-                for employees and the conclusion of labor contracts in the
-                field of IT on the basis of Ethereum block. The whole history
-                of the employee's work, his education, the current level of
-                knowledge in certain areas of IT is an employee's token that can be
-                used anywhere. Both employees and companies have a rating. The system
-                decides how much it costs to work an employee, relative to his token,
-                competition for this vacancy, location of residence, and the company that employs it.
+                <div className='text-left'><h2>Developer</h2></div>
+                <h5>Are you IT developer? Help us improve our system!</h5>
+                <br />
+                <Link type='button' className='btnnn' to='/developer_test'>Pass the test</Link>
               </div>
             </div>
           </div>
