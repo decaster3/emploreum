@@ -211,6 +211,57 @@ export default class MainStartPage extends Component {
             </div>
           </div>
         </section>
+        <section id='paper'>
+          <div className='container'>
+            <div className='row'>
+              <div className='paper-block'>
+                <img src='img/programmm.png' />
+              </div>
+              <div className='paper-block'>
+                <span>Paper</span>
+                <button className='btn'>DOWNLOAD</button>
+              </div>
+              <div className='paper-block hidden-xs' id='desc'>
+                This is what will help you understand
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id='feed-triangle' />
+        <section id='feed-back'>
+          <div className='container'>
+            <div className='row'>
+              <div data-target='slideInLeft' className='col-sm-6 col-xs-12 feed-item box animated'>
+                <div className='text-left'><h2>Contacts</h2></div>
+                <div className='form-group'>
+                  <div className='input-group'>
+                    <input type='text' className='form-control' placeholder='name' aria-describedby='name' />
+                    <span className='input-group-addon' id='name'><i className='fa fa-user' /> </span>
+                  </div>
+                  <div className='input-group '>
+                    <input type='text' className='form-control' placeholder='email' aria-describedby='email' />
+                    <span className='input-group-addon' id='email'><i className='fa fa-address-book' /> </span>
+                  </div>
+                  <textarea className='form-control' placeholder='Message' />
+                  <button className='btn'>submit</button>
+                </div>
+              </div>
+              <div data-target='slideInRight' className='col-sm-6 hidden-xs feed-item box animated'>
+                T is the most developing region in the world. The search for
+                qualified employees requires tremendous efforts. We break the
+                recruitment industry. Emploreum is a bridge between IT
+                companies and specialists. Distributed system for the search
+                for employees and the conclusion of labor contracts in the
+                field of IT on the basis of Ethereum block. The whole history
+                of the employee's work, his education, the current level of
+                knowledge in certain areas of IT is an employee's token that can be
+                used anywhere. Both employees and companies have a rating. The system
+                decides how much it costs to work an employee, relative to his token,
+                competition for this vacancy, location of residence, and the company that employs it.
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     )
   }

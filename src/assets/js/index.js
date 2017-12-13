@@ -17,8 +17,6 @@ var midleTopSection = function () {
     $("#desccription").find("#window").css({
         "left": windowLeft
     });
-
-
 };
 
 $(function () {
