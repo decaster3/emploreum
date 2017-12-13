@@ -35,6 +35,15 @@ body #app {
   position: absolute;
 }
 
+.btnn:hover{
+    background: #3498DB;
+}
+.btnn{
+    background: #257ca7;
+    font-size: 20px;
+    color: #fff;
+}
+
 h2 {
 	color: #AAAAAA;
 	font-weight: normal;
