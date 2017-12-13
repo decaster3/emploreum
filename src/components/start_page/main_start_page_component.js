@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import * as firebase from 'firebase'
 import { Link } from 'react-router-dom'
+import Download from '@axetroy/react-download';
 
 export default class MainStartPage extends Component {
   constructor (props) {
@@ -14,28 +14,14 @@ export default class MainStartPage extends Component {
       interactive: true,
       speed: 'medium',
       density: 'high',
-      background: "/assets/img/bg.png"
+      background: '/assets/img/bg.png'
     }
     var particleCanvas = new ParticleNetwork(canvasDiv, options)
     window.midleTopSection()
   }
 
   downloadParep () {
-    var storage = firebase.storage()
-    var pathReference = storage.ref('line1.png')
-    pathReference.getDownloadURL().then(function (url) {
-      var xhr = new XMLHttpRequest()
-      xhr.responseType = 'blob'
-      xhr.onload = function (event) {
-        var blob = xhr.response
-        console.log(blob)
-        console.log(event)
-      }
-      xhr.open('GET', url)
-      xhr.send()
-    }).catch(function (error) {
-      console.log(error)
-    })
+
   }
   render () {
     return (
@@ -80,17 +66,9 @@ export default class MainStartPage extends Component {
             </div>
             <div id='window-content'>
               <img src='../../assets/img/desc.png' className='img-responsive hidden-sm hidden-md hidden-lg' />
-                    T is the most developing region in the world. The search for qualified employees requires tremendous
-                    efforts. We break the
-                    recruitment industry. Emploreum is a bridge between
-                    IT companies and specialists. Distributed system for the
-                    search for employees and the conclusion of labor contracts
-                    in the field of IT on the basis of Ethereum block. The whole
-                    history of the employee's work, his education, the current
-                    level of knowledge in certain areas of IT is an employee's token that
-                    can be used anywhere. Both employees and companies have a rating.
-                    The system decides how much it costs to work an employee, relative to his token,
-                    competition for this vacancy, location of residence, and the company that employs it.
+                  IT is the most developing sphere in the world. Therefore, the search for qualified employees requires a huge effort. We bring new understanding of the labour market. Emploreum is a bridge between IT companies and specialists.
+                  Emploreum is a decentralized labor exchange where all contracts between employee and employer are made through Ethereum blockchain.
+                  The whole history of the employee, his education, the current level of knowledge in certain areas of IT is a cv-token of the employee which can be used for evaluation and ranking of all employees. Employees have a rating which is an indicator of the quality of their work. At the same time, companies also have a rating reflecting the level of the company. With the rating maintenance of companies and employees, the System is able to determine the cost per hour of employee work.
               <div id='plus'>
                 <div data-target='fadeInLeft' className='col-xs-12 col-sm-6 col-md-3 item blue-item'>
                   <img src='../../assets/img/line1.png' />
@@ -144,12 +122,26 @@ export default class MainStartPage extends Component {
               <div className='col-sm-3 team-member'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
-                    <img src='../../assets/img/ilgiz.jpg' className='img-responsive' alt='team04' />
+                    <img src='https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/19420703_201049817088653_3083517987539423921_n.jpg?oh=c76a582fc3d2dad6c34c363c2f8ba1ca&oe=5ACFC214' className='img-responsive' alt='team04' />
                     <div className='overlay' />
                   </div>
                   <div className='team-detail'>
-                    <h6 className='member-name'>Замалеев Ильгиз</h6>
-                    <p className='member-post'>developer</p>
+                    <h6 className='member-name'>Rinat Khatipov</h6>
+                    <p className='member-post'>Founder, developer, CEO</p>
+                    <hr />
+                    <p className='member-details'>Solidity developer, front-end developer, mobile app developer. Has experience in leading IT company in St. Petersburg. Has more than five completed projects.</p>
+                  </div>
+                </div>
+              </div>
+              <div className='col-sm-3 team-member'>
+                <div className='team-member-bg'>
+                  <div className='member-img'>
+                    <img src='../../assets/img/i1.jpg' className='img-responsive' alt='team04' />
+                    <div className='overlay' />
+                  </div>
+                  <div className='team-detail'>
+                    <h6 className='member-name'>Ilgiz Zamaleev</h6>
+                    <p className='member-post'>Founder, developer</p>
                     <hr />
                     <p className='member-details'>ПРофессор И ннополис , участник 15 сорревнований по
                             программирования
@@ -160,12 +152,12 @@ export default class MainStartPage extends Component {
               <div className='col-sm-3 team-member'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
-                    <img src='../../assets/img/ilgiz.jpg' className='img-responsive' alt='team04' />
+                    <img src='../../assets/img/r2.jpg' className='img-responsive' alt='team04' />
                     <div className='overlay' />
                   </div>
                   <div className='team-detail'>
-                    <h6 className='member-name'>Замалеев Ильгиз</h6>
-                    <p className='member-post'>developer</p>
+                    <h6 className='member-name'>Rinat Gumarov</h6>
+                    <p className='member-post'>Founder, developer</p>
                     <hr />
                     <p className='member-details'>ПРофессор И ннополис , участник 15 сорревнований по
                             программирования
@@ -176,32 +168,14 @@ export default class MainStartPage extends Component {
               <div className='col-sm-3 team-member'>
                 <div className='team-member-bg'>
                   <div className='member-img'>
-                    <img src='../../assets/img/ilgiz.jpg' className='img-responsive' alt='team04' />
+                    <img src='../../assets/img/a1.jpg' className='img-responsive' alt='team04' />
                     <div className='overlay' />
                   </div>
                   <div className='team-detail'>
-                    <h6 className='member-name'>Замалеев Ильгиз</h6>
-                    <p className='member-post'>developer</p>
+                    <h6 className='member-name'>Aydar Nigmatzhanov</h6>
+                    <p className='member-post'>Founder, developer</p>
                     <hr />
-                    <p className='member-details'>ПРофессор И ннополис , участник 15 сорревнований по
-                            программирования
-                            Победитель 5 из них , и просто ахуенный чувак</p>
-                  </div>
-                </div>
-              </div>
-              <div className='col-sm-3 team-member'>
-                <div className='team-member-bg'>
-                  <div className='member-img'>
-                    <img src='../../assets/img/ilgiz.jpg' className='img-responsive' alt='team04' />
-                    <div className='overlay' />
-                  </div>
-                  <div className='team-detail'>
-                    <h6 className='member-name'>Замалеев Ильгиз</h6>
-                    <p className='member-post'>developer</p>
-                    <hr />
-                    <p className='member-details'>ПРофессор И ннополис , участник 15 сорревнований по
-                            программирования
-                            Победитель 5 из них , и просто ахуенный чувак</p>
+                    <p className='member-details'>Innopolis University student. Solidity and Javascript developer. More than 1 year experience of developing Dapps using solidity. More than 5 blockchain projects.</p>
                   </div>
                 </div>
               </div>
@@ -235,7 +209,9 @@ export default class MainStartPage extends Component {
               </div>
               <div className='paper-block'>
                 <span>Paper</span>
-                <button className='btn' onClick={() => this.downloadParep()}>DOWNLOAD</button>
+                <Download file='../../assets/emploreum.pdf' content='../../assets/emploreum.pdf'>
+                  <button className='btn' type='button'>Click and Download</button>
+                </Download>
               </div>
               <div className='paper-block hidden-xs' id='desc'>
                 This is what will help you understand
@@ -249,6 +225,7 @@ export default class MainStartPage extends Component {
             <div className='row'>
               <div data-target='slideInLeft' className='col-sm-6 col-xs-12 feed-item box animated boxHidded'>
                 <div className='text-left'><h2>Company</h2></div>
+                <h5>Be one of the first companies of the future</h5>
                 <div className='form-group'>
                   <div className='input-group'>
                     <input type='text' className='form-control' placeholder='name' aria-describedby='name' />
@@ -264,7 +241,7 @@ export default class MainStartPage extends Component {
               </div>
               <div data-target='slideInRight' className='col-sm-6 hidden-xs feed-item box animated boxHidded'>
                 <div className='text-left'><h2>Developer</h2></div>
-                <h5>Are you IT developer? Help us improve our system!</h5>
+                <h5>Are you a developer? Take the test to make our system better!</h5>
                 <br />
                 <Link type='button' className='btnnn' to='/developer_test'>Pass the test</Link>
               </div>
