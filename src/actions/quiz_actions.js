@@ -1,6 +1,6 @@
 var C = require('../constants/quiz_constants.js')
 import { push } from 'react-router-redux'
-
+import * as firebase from 'firebase'
 
 export function changeAnswer (currentAnswer, successor) {
   console.log(currentAnswer)
@@ -24,7 +24,10 @@ export function answer () {
         type: C.END_QUIZ,
         question: 'Thank you!'
       })
+
+      firebase.database().ref().child('answers').push(getState().quiz.answers)
       console.log(getState().quiz.answers)
+
       setTimeout(function () {
         dispatch(push('/'))
       }, 2000)
