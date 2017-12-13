@@ -127,7 +127,7 @@ export default class MainStartPage extends Component {
                   </div>
                   <div className='team-detail'>
                     <h6 className='member-name'>Rinat Khatipov</h6>
-                    <p className='member-post'>Founder, developer, CEO</p>
+                    <p className='member-post'>Founder, front-end developer, design, CEO</p>
                     <hr />
                     <p className='member-details'>Innopolis University student. Solidity developer, front-end developer, mobile app developer. Has experience in leading IT company in St. Petersburg. Has more than five completed projects.</p>
                   </div>
@@ -141,7 +141,7 @@ export default class MainStartPage extends Component {
                   </div>
                   <div className='team-detail'>
                     <h6 className='member-name'>Mickhail Magomedov</h6>
-                    <p className='member-post'>Founder, developer, CEO</p>
+                    <p className='member-post'>Founder, back-end developer, CEO</p>
                     <hr />
                     <p className='member-details'>Student of Kazan Federal University. More than 5 years of work experience. Full stack web developer. Participated in the creation of 3 startups</p>
                   </div>
@@ -155,7 +155,7 @@ export default class MainStartPage extends Component {
                   </div>
                   <div className='team-detail'>
                     <h6 className='member-name'>Ilgiz Zamaleev</h6>
-                    <p className='member-post'>Founder, developer</p>
+                    <p className='member-post'>Founder, mobile-developer, UX, marketing</p>
                     <hr />
                     <p className='member-details'>Innopolis University student. ReactJS, React native, solidity developer. More than 3 years experience in web development.</p>
                   </div>
@@ -169,7 +169,7 @@ export default class MainStartPage extends Component {
                   </div>
                   <div className='team-detail'>
                     <h6 className='member-name'>Rinat Gumarov</h6>
-                    <p className='member-post'>Founder, developer</p>
+                    <p className='member-post'>Founder, back-end developer, big data </p>
                     <hr />
                     <p className='member-details'>Innopolis University student. Solidity, Java, JavaScript developer. Have 3 years expiriance in mobile development. Have expiriance in enterprice development.</p>
                   </div>
@@ -182,8 +182,8 @@ export default class MainStartPage extends Component {
                     <div className='overlay' />
                   </div>
                   <div className='team-detail'>
-                    <h6 className='member-name'>Aydar Nigmatzhanov</h6>
-                    <p className='member-post'>Founder, developer</p>
+                    <h6 className='member-name'>Aydar Negimatzhanov</h6>
+                    <p className='member-post'>Founder, solidity developer, CEO</p>
                     <hr />
                     <p className='member-details'>Innopolis University student. Solidity and Javascript developer. More than 1 year experience of developing Dapps using solidity. More than 5 blockchain projects.</p>
                   </div>
@@ -217,9 +217,7 @@ export default class MainStartPage extends Component {
               </div>
               <div className='paper-block'>
                 <span>White Paper</span>
-
-                  <a href='../../assets/emploreum.pdf' className='btn' type='button'>Click and Download</a>
-
+                <a href='../../assets/emploreum.pdf' className='btn' type='button'>Click and Download</a>
               </div>
               <div className='paper-block hidden-xs' id='desc'>
                 This is what will help you understand
