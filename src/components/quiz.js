@@ -35,7 +35,7 @@ class Quiz extends Component {
         <div className='containerr'>
           <h2>{question}</h2>
           {answersTags}
-          <button className='btnn' onClick={() => { answer() }}>Далее</button>
+          <button className='btnn' onClick={() => { answer() }}>Next</button>
         </div>
       </div>
     )
