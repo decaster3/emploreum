@@ -41,7 +41,7 @@ class Quiz extends Component {
     }
 
     return (
-      <div className='bodyClass'>
+      <div className='bodyClass overfloH'>
         <div id='particle-canvas' />
         <div className='containerr'>
           <h2>{question}</h2>

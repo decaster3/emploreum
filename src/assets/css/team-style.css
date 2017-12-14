@@ -122,6 +122,10 @@
     border-top: 1px solid #FFF;
 }
 
+  #technology hr {
+      border-top: 1px solid #fff;
+  }
+
 #team .team-style .member-social {
     overflow: hidden;
     -webkit-transition: all 0.3s ease;

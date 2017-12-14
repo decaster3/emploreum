@@ -247,6 +247,26 @@ export default class MainStartPage extends Component {
             </div>
           </div>
         </section>
+        <section id='sd' />
+        <section id='technology' className='hidden-xs'>
+          <div id='circle-orbit-container'>
+            <div id='inner-orbit' className='circle'>
+              <div className='mini-orbit-cirlces' id='circle-1' />
+              <div className='mini-orbit-cirlces' id='circle-6' />
+            </div>
+            <div id='middle-orbit' className='circle'>
+              <div className='mini-orbit-cirlces' id='circle-2' />
+              <div className='mini-orbit-cirlces' id='circle-4' />
+            </div>
+            <div id='outer-orbit' className='circle'>
+              <div className='mini-orbit-cirlces' id='circle-3' />
+              <div className='mini-orbit-cirlces' id='circle-5' />
+            </div>
+          </div>
+          <span>Technology cloud</span>
+          <hr className='qwe' />
+        </section>
+        <section id='sd' />
         <section id='feed-triangle' />
         <section id='feed-back'>
           <div className='container'>

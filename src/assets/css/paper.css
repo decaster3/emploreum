@@ -52,7 +52,11 @@
 }
 
 @media (max-width: 767px) {
+    #paper img {
+        height: 100px;
+    }
     #paper .paper-block{
         margin-right: 0;
+        margin-left: 0;
     }
 }
