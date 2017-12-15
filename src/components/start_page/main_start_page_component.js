@@ -49,22 +49,22 @@ export default class MainStartPage extends Component {
     return (
       <div className='bodyClass'>
         <header className='start hidden-xs'>
-          <div className='block' id='header-about'>
+          <div className='block' data-target='#window' id='header-about'>
             <span>
               about
             </span>
           </div>
-          <div className='block' id='header-team'>
+          <div className='block' data-target='.team-style' id='header-team'>
             <span>
               TEAM
             </span>
           </div>
-          <div className='block'>
+          <div className='block' data-target='.paper-block'>
             <span>
               paper
             </span>
           </div>
-          <div className='block'>
+          <div className='block' data-target='#feed-back'>
             <span>
               contact
             </span>
