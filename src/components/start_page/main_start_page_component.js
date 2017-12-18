@@ -1,6 +1,37 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import * as firebase from 'firebase'
+// <section id='timeline'>
+//   <div className='container'>
+//     <div className='row'>
+//       <h3 className='road-map'>Road maps</h3>
+//       <div data-target='slideInLeft' className='col-sm-6 col-xs-12 feed-item box animated boxHidded'>
+//         <div className='text-center'><h2 className='underline'>ICO</h2></div>
+//         <ul className='timeline'>
+//           <li className='event' data-date='12:30 - 1:00pm'>
+//             <h3>Registration</h3>
+//             <p>Get here on time, it's first come first serve. Be late, get turned away.</p>
+//           </li>
+//           <li className='event' data-date='2:30 - 4:00pm'>
+//             <h3>Opening Ceremony</h3>
+//             <p>Get ready for an exciting event, this will kick off in amazing fashion with MOP & Busta Rhymes as an opening show.</p>
+//           </li>
+//           <li className='event' data-date='5:00 - 8:00pm'>
+//             <h3>Main Event</h3>
+//             <p>This is where it all goes down. You will compete head to head with your friends and rivals. Get ready!</p>
+//           </li>
+//           <li className='event' data-date='8:30 - 9:30pm'>
+//             <h3>Closing Ceremony</h3>
+//             <p>See how is the victor and who are the losers. The big stage is where the winners bask in their own glory.</p>
+//           </li>
+//         </ul>
+//       </div>
+//       <div data-target='slideInRight' className='col-sm-6 hidden-xs feed-item box animated boxHidded'>
+//         <div className='text-center'><h2 className='underline'>Emploreum</h2></div>
+//       </div>
+//     </div>
+//   </div>
+// </section>
 
 export default class MainStartPage extends Component {
   constructor (props) {
@@ -64,6 +95,11 @@ export default class MainStartPage extends Component {
               paper
             </span>
           </div>
+          <div className='block' data-target='.paper-block'>
+            <span>
+              Technologies
+            </span>
+          </div>
           <div className='block' data-target='#feed-back'>
             <span>
               contact
@@ -88,9 +124,9 @@ export default class MainStartPage extends Component {
             </div>
             <div id='window-content'>
               <img src='../../assets/img/desc.png' className='img-responsive hidden-sm hidden-md hidden-lg' />
-                  IT is the most developing sphere in the world. Therefore, the search for qualified employees requires a huge effort. We bring new understanding of the labour market. Emploreum is a bridge between IT companies and specialists.
+                  IT is the most developing sphere in the world. Therefore, the search for qualified employees requires great effort. We bring a new understanding of the labour market. Emploreum is a bridge between IT companies and specialists.
                   Emploreum is a decentralized labor exchange where all contracts between employee and employer are made through Ethereum blockchain.
-                  The whole history of the employee, his education, the current level of knowledge in certain areas of IT is a cv-token of the employee which can be used for evaluation and ranking of all employees. Employees have a rating which is an indicator of the quality of their work. At the same time, companies also have a rating reflecting the level of the company. With the rating maintenance of companies and employees, the System is able to determine the cost per hour of employee work.
+                  A professional experience, education, current level of knowledge in certain areas of IT is a cv-token of the employees which are used to evaluate and rank them. Employees have a rating which is an indicator of the quality of their work. At the same time, companies also have a rating reflecting the level of the company. With the quality of maintenance of companies and employees, the System is able to determine the cost per hour of employee's work.
               <div id='plus'>
                 <div data-target='slideInUp' className='col-xs-12 col-sm-6 col-md-3 item blue-item col-xs-12 box animated boxHidded'>
                   <img src='../../assets/img/line1.png' />
@@ -192,7 +228,7 @@ export default class MainStartPage extends Component {
                     <h6 className='member-name'>Rinat Gumarov</h6>
                     <p className='member-post'>Founder, back-end developer, big data </p>
                     <hr />
-                    <p className='member-details'>Innopolis University student. Solidity, Java, JavaScript developer. Have 3 years expiriance in mobile development. Have expiriance in enterprice development.</p>
+                    <p className='member-details'>Innopolis University student. Solidity, Java, JavaScript developer. Have 3 years expirience in mobile development. Have expiriance in enterprice development.</p>
                   </div>
                 </div>
               </div>
@@ -247,26 +283,67 @@ export default class MainStartPage extends Component {
             </div>
           </div>
         </section>
-        <section id='sd' />
         <section id='technology' className='hidden-xs'>
-          <div id='circle-orbit-container'>
-            <div id='inner-orbit' className='circle'>
-              <div className='mini-orbit-cirlces' id='circle-1' />
-              <div className='mini-orbit-cirlces' id='circle-6' />
-            </div>
-            <div id='middle-orbit' className='circle'>
-              <div className='mini-orbit-cirlces' id='circle-2' />
-              <div className='mini-orbit-cirlces' id='circle-4' />
-            </div>
-            <div id='outer-orbit' className='circle'>
-              <div className='mini-orbit-cirlces' id='circle-3' />
-              <div className='mini-orbit-cirlces' id='circle-5' />
+          <div className='container'>
+            <div className='row'>
+              <h2>technology cloud</h2>
+              <div id='circle-orbit'>
+                <div id='circle-orbit-container'>
+                  <div id='inner-orbit' className='circle'>
+                    <div className='mini-orbit-cirlces' id='circle-1' />
+                    <div className='mini-orbit-cirlces' id='circle-6' />
+                  </div>
+                  <div id='middle-orbit' className='circle'>
+                    <div className='mini-orbit-cirlces' id='circle-2' />
+                    <div className='mini-orbit-cirlces' id='circle-4' />
+                  </div>
+                  <div id='outer-orbit' className='circle'>
+                    <div className='mini-orbit-cirlces' id='circle-3' />
+                    <div className='mini-orbit-cirlces' id='circle-5' />
+                  </div>
+                </div>
+              </div>
+              <div id='tech-descr'>
+                <div className='tech-block top left'>
+                  <h4>Block Chain</h4>
+                  <span>
+                    Completely decentralized application.
+                    Immutable Records.
+                    Your cv-token can be used anywhere.
+                    All data is consistent with each other and can not be counterfeited.
+                  </span>
+                </div>
+                <div className='tech-block top right'>
+                  <h4>Smart Contracts</h4>
+                  <span>
+                    Smart contracts are account holding
+                    objects on the ethereum blockchain. They
+                    can make decisions, store data, and send ether
+                    to others, without any possibility of
+                    downtime, censorship, fraud or third party interference.
+                  </span>
+                </div>
+                <div className='tech-block bottom left'>
+                  <h4>Big Data</h4>
+                  <span>
+                    We use modern algorithms of machine learning to
+                    ensure that the system has a balance between employees
+                    and between companies. Emploreum is fully adaptive to changes.
+                  </span>
+                </div>
+                <div className='tech-block bottom right'>
+                  <h4>Web technologies</h4>
+                  <span>
+                    Our experience in combining with the most
+                    advanced technologies in the world of Web programming
+                    allow us to make the most convenient, understandable,
+                    adaptive interface.
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
-          <span>Technology cloud</span>
-          <hr className='qwe' />
         </section>
-        <section id='sd' />
         <section id='feed-triangle' />
         <section id='feed-back'>
           <div className='container'>
