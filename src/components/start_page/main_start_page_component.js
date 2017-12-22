@@ -1,45 +1,17 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import * as firebase from 'firebase'
-// <section id='timeline'>
-//   <div className='container'>
-//     <div className='row'>
-//       <h3 className='road-map'>Road maps</h3>
-//       <div data-target='slideInLeft' className='col-sm-6 col-xs-12 feed-item box animated boxHidded'>
-//         <div className='text-center'><h2 className='underline'>ICO</h2></div>
-//         <ul className='timeline'>
-//           <li className='event' data-date='12:30 - 1:00pm'>
-//             <h3>Registration</h3>
-//             <p>Get here on time, it's first come first serve. Be late, get turned away.</p>
-//           </li>
-//           <li className='event' data-date='2:30 - 4:00pm'>
-//             <h3>Opening Ceremony</h3>
-//             <p>Get ready for an exciting event, this will kick off in amazing fashion with MOP & Busta Rhymes as an opening show.</p>
-//           </li>
-//           <li className='event' data-date='5:00 - 8:00pm'>
-//             <h3>Main Event</h3>
-//             <p>This is where it all goes down. You will compete head to head with your friends and rivals. Get ready!</p>
-//           </li>
-//           <li className='event' data-date='8:30 - 9:30pm'>
-//             <h3>Closing Ceremony</h3>
-//             <p>See how is the victor and who are the losers. The big stage is where the winners bask in their own glory.</p>
-//           </li>
-//         </ul>
-//       </div>
-//       <div data-target='slideInRight' className='col-sm-6 hidden-xs feed-item box animated boxHidded'>
-//         <div className='text-center'><h2 className='underline'>Emploreum</h2></div>
-//       </div>
-//     </div>
-//   </div>
-// </section>
-
-export default class MainStartPage extends Component {
+import { getTranslation, changeLang } from '../../actions/lang_actions.js'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+class MainStartPage extends Component {
   constructor (props) {
     super(props)
     this.state = {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      en: true
     }
     this.handleChange = this.handleChange.bind(this)
     this.writeFir = this.writeFir.bind(this)
@@ -50,6 +22,15 @@ export default class MainStartPage extends Component {
     this.setState({
       [name]: event.target.value
     })
+  }
+  changeLangHandle (name) {
+    var a = this.state.en
+    if (name !== this.props.lang.current_lang) {
+      this.setState({
+        en: !a
+      })
+      this.props.changeLang(name)
+    }
   }
   writeFir () {
     var comanysRef = firebase.database().ref().child('companies')
@@ -77,32 +58,38 @@ export default class MainStartPage extends Component {
     window.midleTopSection()
   }
   render () {
+    let p = this.props
+    let s = this.state
+    let curL = p.lang.current_lang
+    // TODO: СДЕЛАТЬ ДИЗАЙН ЭТИХ ДВУХ ЧЕКБОКСОВ ОТ МИШИ
     return (
       <div className='bodyClass'>
+        <input name='en' onClick={() => this.changeLangHandle('en')} type='radio' checked={s.en ? 'checked' : ''} />
+        <input name='ru' onClick={() => this.changeLangHandle('ru')} type='radio' checked={!s.en ? 'checked' : ''} />
         <header className='start hidden-xs'>
           <div className='block' data-target='#window' id='header-about'>
             <span>
-              about
+              {getTranslation(curL, 'about')}
             </span>
           </div>
           <div className='block' data-target='.team-style' id='header-team'>
             <span>
-              TEAM
+              {getTranslation(curL, 'team')}
             </span>
           </div>
           <div className='block' data-target='.paper-block'>
             <span>
-              paper
+              {getTranslation(curL, 'paper')}
             </span>
           </div>
           <div className='block' data-target='.paper-block'>
             <span>
-              Technologies
+              {getTranslation(curL, 'technologies')}
             </span>
           </div>
           <div className='block' data-target='#feed-back'>
             <span>
-              contact
+              {getTranslation(curL, 'contact')}
             </span>
           </div>
         </header>
@@ -111,7 +98,7 @@ export default class MainStartPage extends Component {
           <div id='text'>
             <h2>Emploreum</h2>
             <small>
-              Education, experience, skills - one token on the blockchain. This is the revolution in recruitment of IT employees.
+              {getTranslation(curL, 'short_descr')}
             </small>
           </div>
         </section>
@@ -124,45 +111,42 @@ export default class MainStartPage extends Component {
             </div>
             <div id='window-content'>
               <img src='../../assets/img/desc.png' className='img-responsive hidden-sm hidden-md hidden-lg' />
-                  IT is the most developing sphere in the world. Therefore, the search for qualified employees requires great effort. We bring a new understanding of the labour market. Emploreum is a bridge between IT companies and specialists.
-                  Emploreum is a decentralized labor exchange where all contracts between employee and employer are made through Ethereum blockchain.
-                  A professional experience, education, current level of knowledge in certain areas of IT is a cv-token of the employees which are used to evaluate and rank them. Employees have a rating which is an indicator of the quality of their work. At the same time, companies also have a rating reflecting the level of the company. With the quality of maintenance of companies and employees, the System is able to determine the cost per hour of employee's work.
+              {getTranslation(curL, 'intro')}
               <div id='plus'>
                 <div data-target='slideInUp' className='col-xs-12 col-sm-6 col-md-3 item blue-item col-xs-12 box animated boxHidded'>
                   <img src='../../assets/img/line1.png' />
                   <div className='col-xs-12' id='top'>
-                    A unique cv-token
+                    {getTranslation(curL, 'first_plus_n')}
                   </div>
                   <div className='col-xs-12 ' id='text'>
-                    Anyone can create his own labour book in the blockchain, which reflects the level of specific skills, experience, education, certificates.
-                  </div>
+                    {getTranslation(curL, 'first_plus_d')}                  </div>
                 </div>
                 <div data-target='slideInUp' className='col-xs-12 col-sm-6 col-md-3 item blue-item col-xs-12 box animated boxHidded'>
                   <img src='../../assets/img/line1.png' />
                   <div className='col-xs-12' id='top'>
-                    Escrow smart contracts instead of a labor contract
+                    {getTranslation(curL, 'second_plus_n')}
                   </div>
                   <div className='col-xs-12 ' id='text'>
-                    Jobs are a smart contract, with the requirement for work experience, and a level of certain skills.
+                    {getTranslation(curL, 'second_plus_d')}
                   </div>
                 </div>
                 <div className='clearfix hidden-md hidden-lg hidden-xs' />
                 <div data-target='slideInUp' className='col-xs-12 col-sm-6 col-md-3 item blue-item col-xs-12 box animated boxHidded'>
                   <img src='../../assets/img/line1.png' />
                   <div className='col-xs-12' id='top'>
-                    Companies pay for skills
+                    {getTranslation(curL, 'third_plus_n')}
                   </div>
                   <div className='col-xs-12 ' id='text'>
-                    Every skill (JS, C ++) costs different money on the labor market. Companies choose the developer level.
+                    {getTranslation(curL, 'third_plus_d')}
                   </div>
                 </div>
                 <div data-target='slideInUp' className='col-xs-12 col-sm-6 col-md-3 item blue-item col-xs-12 box animated boxHidded'>
                   <img src='../../assets/img/line1.png' />
                   <div className='col-xs-12' id='top'>
-                    Internal currency
+                    {getTranslation(curL, 'four_plus_n')}
                   </div>
                   <div className='col-xs-12 ' id='text'>
-                    Time. Companies pay per each hour of time worked on task using any skill or their combination(JS + Ruby on Rails).
+                    {getTranslation(curL, 'four_plus_d')}
                   </div>
                 </div>
               </div>
@@ -173,7 +157,7 @@ export default class MainStartPage extends Component {
           <div className='container team team-style'>
             <div className='row'>
               <div className='section text-center'>
-                <h2>TEAM MEMBERS</h2>
+                <h2>{getTranslation(curL, 'tm')}</h2>
               </div>
 
               <div data-target='fadeIn' className='col-sm-3 team-member box animated boxHidded'>
@@ -183,10 +167,10 @@ export default class MainStartPage extends Component {
                     <div className='overlay' />
                   </div>
                   <div className='team-detail'>
-                    <h6 className='member-name'>Rinat Khatipov</h6>
-                    <p className='member-post'>Founder, front-end developer, design, CEO</p>
+                    <h6 className='member-name'>{getTranslation(curL, 'rkh')}</h6>
+                    <p className='member-post'>{getTranslation(curL, 'rkh_short')}</p>
                     <hr />
-                    <p className='member-details'>Innopolis University student. Solidity developer, front-end developer, mobile app developer. Has experience in leading IT company in St. Petersburg. Is co-founder of many start-ups</p>
+                    <p className='member-details'>{getTranslation(curL, 'rkh_long')}</p>
                   </div>
                 </div>
               </div>
@@ -197,10 +181,10 @@ export default class MainStartPage extends Component {
                     <div className='overlay' />
                   </div>
                   <div className='team-detail'>
-                    <h6 className='member-name'>Mickhail Magomedov</h6>
-                    <p className='member-post'>Founder, back-end developer, CEO</p>
+                    <h6 className='member-name'>{getTranslation(curL, 'mik')}</h6>
+                    <p className='member-post'>{getTranslation(curL, 'mik_short')}</p>
                     <hr />
-                    <p className='member-details'>Student of Kazan Federal University. More than 5 years of work experience. Full stack web developer. Participated in the creation of 3 startups</p>
+                    <p className='member-details'>{getTranslation(curL, 'mik_long')}</p>
                   </div>
                 </div>
               </div>
@@ -211,10 +195,10 @@ export default class MainStartPage extends Component {
                     <div className='overlay' />
                   </div>
                   <div className='team-detail'>
-                    <h6 className='member-name'>Ilgiz Zamaleev</h6>
-                    <p className='member-post'>Founder, mobile-developer, UX, marketing</p>
+                    <h6 className='member-name'>{getTranslation(curL, 'ilg')}</h6>
+                    <p className='member-post'>{getTranslation(curL, 'ilg_short')}</p>
                     <hr />
-                    <p className='member-details'>Innopolis University student. ReactJS, React native, solidity developer. More than 3 years experience in web development.</p>
+                    <p className='member-details'>{getTranslation(curL, 'ilg_long')}</p>
                   </div>
                 </div>
               </div>
@@ -225,10 +209,10 @@ export default class MainStartPage extends Component {
                     <div className='overlay' />
                   </div>
                   <div className='team-detail'>
-                    <h6 className='member-name'>Rinat Gumarov</h6>
-                    <p className='member-post'>Founder, back-end developer, big data </p>
+                    <h6 className='member-name'>{getTranslation(curL, 'rig')}</h6>
+                    <p className='member-post'>{getTranslation(curL, 'rig_short')}</p>
                     <hr />
-                    <p className='member-details'>Innopolis University student. Solidity, Java, JavaScript developer. Have 3 years expirience in mobile development. Have expiriance in enterprice development.</p>
+                    <p className='member-details'>{getTranslation(curL, 'rig_long')}</p>
                   </div>
                 </div>
               </div>
@@ -240,15 +224,15 @@ export default class MainStartPage extends Component {
                     <div className='overlay' />
                   </div>
                   <div className='team-detail'>
-                    <h6 className='member-name'>Aydar Negimatzhanov</h6>
-                    <p className='member-post'>Founder, solidity developer, CEO</p>
+                    <h6 className='member-name'>{getTranslation(curL, 'ay')}</h6>
+                    <p className='member-post'>{getTranslation(curL, 'ay_short')}</p>
                     <hr />
-                    <p className='member-details'>Innopolis University student. Solidity and Javascript developer. More than 1 year experience of developing Dapps using solidity. More than 5 blockchain projects.</p>
+                    <p className='member-details'>{getTranslation(curL, 'ay_long')}</p>
                   </div>
                 </div>
               </div>
               <div className='section text-center'>
-                <h2>ADVISORS</h2>
+                <h2>{getTranslation(curL, 'advisors')}</h2>
               </div>
               <div data-target='fadeIn' className='col-sm-3 team-member box animated boxHidded'>
                 <div className='team-member-bg'>
@@ -257,10 +241,10 @@ export default class MainStartPage extends Component {
                     <div className='overlay' />
                   </div>
                   <div className='team-detail'>
-                    <h6 className='member-name'>Alexander Gryaznov</h6>
-                    <p className='member-post'>Chief Executive Officer</p>
+                    <h6 className='member-name'>{getTranslation(curL, 'alg')}</h6>
+                    <p className='member-post'>{getTranslation(curL, 'alg_short')}</p>
                     <hr />
-                    <p className='member-details'>Cryptology Expert, programmer with more than 10 years experience. Alexander founded and conducts the first academic course on Ethereum at Innopolis University.</p>
+                    <p className='member-details'>{getTranslation(curL, 'alg_long')}</p>
                   </div>
                 </div>
               </div>
@@ -274,11 +258,11 @@ export default class MainStartPage extends Component {
                 <img src='../../assets/img/programmm.png' />
               </div>
               <div className='paper-block'>
-                <span>White Paper</span>
-                <a href='../../assets/emploreum.pdf' className='btn' type='button'>Click and Download</a>
+                <span>{getTranslation(curL, 'w_paper')}</span>
+                <a href='../../assets/emploreum.pdf' className='btn' type='button'>{getTranslation(curL, 'click_a_d')}</a>
               </div>
               <div className='paper-block hidden-xs' id='desc'>
-                This is what will help you understand
+                {getTranslation(curL, 'paper_desc')}
               </div>
             </div>
           </div>
@@ -286,7 +270,7 @@ export default class MainStartPage extends Component {
         <section id='technology' className='hidden-xs'>
           <div className='container'>
             <div className='row'>
-              <h2>technology cloud</h2>
+              <h2>{getTranslation(curL, 'tech_c')}</h2>
               <div id='circle-orbit'>
                 <div id='circle-orbit-container'>
                   <div id='inner-orbit' className='circle'>
@@ -305,39 +289,27 @@ export default class MainStartPage extends Component {
               </div>
               <div id='tech-descr'>
                 <div className='tech-block top left'>
-                  <h4>Block Chain</h4>
+                  <h4>{getTranslation(curL, 'blockchain')}</h4>
                   <span>
-                    Completely decentralized application.
-                    Immutable Records.
-                    Your cv-token can be used anywhere.
-                    All data is consistent with each other and can not be counterfeited.
+                    {getTranslation(curL, 'blockchain_d')}
                   </span>
                 </div>
                 <div className='tech-block top right'>
-                  <h4>Smart Contracts</h4>
+                  <h4>{getTranslation(curL, 'sm_contracts')}</h4>
                   <span>
-                    Smart contracts are account holding
-                    objects on the ethereum blockchain. They
-                    can make decisions, store data, and send ether
-                    to others, without any possibility of
-                    downtime, censorship, fraud or third party interference.
+                    {getTranslation(curL, 'sm_contracts_d')}
                   </span>
                 </div>
                 <div className='tech-block bottom left'>
-                  <h4>Big Data</h4>
+                  <h4>{getTranslation(curL, 'big_data')}</h4>
                   <span>
-                    We use modern algorithms of machine learning to
-                    ensure that the system has a balance between employees
-                    and between companies. Emploreum is fully adaptive to changes.
+                    {getTranslation(curL, 'big_data_d')}
                   </span>
                 </div>
                 <div className='tech-block bottom right'>
-                  <h4>Web technologies</h4>
+                  <h4>{getTranslation(curL, 'w_tech')}</h4>
                   <span>
-                    Our experience in combining with the most
-                    advanced technologies in the world of Web programming
-                    allow us to make the most convenient, understandable,
-                    adaptive interface.
+                    {getTranslation(curL, 'w_tech_d')}
                   </span>
                 </div>
               </div>
@@ -349,8 +321,8 @@ export default class MainStartPage extends Component {
           <div className='container'>
             <div className='row'>
               <div data-target='slideInLeft' className='col-sm-6 col-xs-12 feed-item box animated boxHidded'>
-                <div className='text-left'><h2>Company</h2></div>
-                <h5>Be one of the first companies of the future</h5>
+                <div className='text-left'><h2>{getTranslation(curL, 'company')}</h2></div>
+                <h5>{getTranslation(curL, 'company_motivation')}</h5>
                 <div className='form-group'>
                   <div className='input-group'>
                     <input type='text' className='form-control' placeholder='name' aria-describedby='name' name='name' onChange={this.handleChange} value={this.state.name} />
@@ -361,14 +333,14 @@ export default class MainStartPage extends Component {
                     <span className='input-group-addon' id='email'><i className='fa fa-address-book' /> </span>
                   </div>
                   <textarea className='form-control' placeholder='Message' name='message' onChange={this.handleChange} value={this.state.message} />
-                  <button className='btn' onClick={() => this.writeFir()}>submit</button>
+                  <button className='btn' onClick={() => this.writeFir()}>{getTranslation(curL, 'submit')}</button>
                 </div>
               </div>
               <div data-target='slideInRight' className='col-sm-6 hidden-xs feed-item box animated boxHidded'>
-                <div className='text-left'><h2>Developer</h2></div>
-                <h5>Are you a developer? Take the test to make our system better!</h5>
+                <div className='text-left'><h2>{getTranslation(curL, 'dev')}</h2></div>
+                <h5>{getTranslation(curL, 'dev_motivation')}</h5>
                 <br />
-                <Link type='button' className='btnnn' to='/developer_test'>Pass the test</Link>
+                <Link type='button' className='btnnn' to='/developer_test'>{getTranslation(curL, 'pass_t')}</Link>
               </div>
             </div>
           </div>
@@ -377,3 +349,14 @@ export default class MainStartPage extends Component {
     )
   }
 }
+
+function mapStateToProps (state) {
+  return {
+    lang: state.lang
+  }
+}
+
+function mapDispatchToProps (dispatch) {
+  return bindActionCreators({ changeLang }, dispatch)
+}
+export default connect(mapStateToProps, mapDispatchToProps)(MainStartPage)

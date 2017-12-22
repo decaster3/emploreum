@@ -16,6 +16,7 @@ var config = {
 firebase.initializeApp(config)
 
 const store = configureStore()
+window.store = store
 
 ReactDOM.render(
   <AppContainer>

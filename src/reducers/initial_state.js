@@ -8,5 +8,8 @@ module.exports = {
     successor: null,
     answers: [],
     questions: test
+  },
+  lang: {
+    current_lang: 'en'
   }
 }

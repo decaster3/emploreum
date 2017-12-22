@@ -1,12 +1,12 @@
 #technology {
     width: 100%;
     background-color: #323638;
-    padding-bottom: 110px;
+    padding-bottom: 80px;
     overflow-x: hidden;
 }
 
 #technology .container {
-    padding-bottom: 170px;
+    padding-bottom: 30px;
     border-bottom: 2px solid #fff;
     position: relative;
 }
@@ -31,7 +31,7 @@
 #technology #circle-orbit {
     position: relative;
     margin: 0 auto;
-    width: 50%;
+    width: 65%;
 }
 
 #technology #circle-orbit-container {
@@ -176,7 +176,7 @@
 }
 
 #technology #tech-descr .tech-block.bottom {
-    bottom: 90px;
+    bottom: 80px;
 }
 
 @-webkit-keyframes spin-right {
@@ -202,6 +202,9 @@
         text-align: center;
         width: 100%;
     }
+    #technology {
+      padding-bottom: 40px;
+    }
 
     #technology #tech-descr .tech-block span {
         max-width: 90%;
@@ -211,7 +214,7 @@
         display: inline-block;
         width: 49%;
         font-size: 14px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         vertical-align: top;
     }
 
